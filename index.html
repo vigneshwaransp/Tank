@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website Tank</title>
+
+<style>
+:root {
+    --bg-light: #ffffff;
+    --text-light: #1d1d1f;
+    --card-light: #f5f5f7;
+
+    --bg-dark: #0f0f12;
+    --text-dark: #f5f5f7;
+    --card-dark: #1c1c1e;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 80px 20px 40px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #6e6e73;
+}
+
+/* Toggle button */
+.toggle {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: 1px solid #ccc;
+    background: none;
+    border-radius: 20px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Grid */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card */
+.card {
+    background: var(--card-light);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #6e6e73;
+    line-height: 1.6;
+}
+
+.tech {
+    margin: 15px 0 25px;
+    font-size: 0.85rem;
+    color: #86868b;
+}
+
+.card a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #0066cc;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.85rem;
+    color: #86868b;
+}
+
+/* ===================== */
+/* DARK MODE */
+/* ===================== */
+
+body.dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark header p,
+body.dark .card p,
+body.dark .tech,
+body.dark footer {
+    color: #a1a1aa;
+}
+
+body.dark .card {
+    background: var(--card-dark);
+}
+
+/* VIBGYOR COLORS */
+body.dark .card:nth-child(1) { border-left: 5px solid violet; box-shadow: 0 0 20px rgba(238,130,238,0.4); }
+body.dark .card:nth-child(2) { border-left: 5px solid indigo; box-shadow: 0 0 20px rgba(75,0,130,0.4); }
+body.dark .card:nth-child(3) { border-left: 5px solid blue; box-shadow: 0 0 20px rgba(0,0,255,0.4); }
+body.dark .card:nth-child(4) { border-left: 5px solid green; box-shadow: 0 0 20px rgba(0,255,0,0.4); }
+body.dark .card:nth-child(5) { border-left: 5px solid yellow; box-shadow: 0 0 20px rgba(255,255,0,0.4); }
+body.dark .card:nth-child(6) { border-left: 5px solid orange; box-shadow: 0 0 20px rgba(255,165,0,0.4); }
+body.dark .card:nth-child(7) { border-left: 5px solid red; box-shadow: 0 0 20px rgba(255,0,0,0.4); }
+body.dark .card:nth-child(8) { border-left: 5px solid violet; }
+body.dark .card:nth-child(9) { border-left: 5px solid indigo; }
+body.dark .card:nth-child(10){ border-left: 5px solid blue; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <button class="toggle" onclick="toggleTheme()">🌙 Dark</button>
+    <h1>My Website Tank</h1>
+    <p>A curated collection of my deployed web projects</p>
+</header>
+
+<section class="container">
+
+<div class="card">
+    <h3>Cyberpunk Themed Portfolio</h3>
+    <p>Futuristic portfolio with artistic cyberpunk aesthetics.</p>
+    <div class="tech">Prompt · TypeScript · React</div>
+    <a href="https://vigneshwaransp.github.io/vicky/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>CyberCard Generator</h3>
+    <p>Hacker-style Cyber ID generator with QR code.</p>
+    <div class="tech">Prompt · Anything AI · React</div>
+    <a href="https://cybercard.created.app/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>Chatbot Application</h3>
+    <p>Interactive chatbot built with API-based responses.</p>
+    <div class="tech">HTML · CSS · API</div>
+    <a href="https://vigneshwaransp.github.io/Z.I.A/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>CakeShop Web</h3>
+    <p>Sleek cake shop website with colorful UI.</p>
+    <div class="tech">JavaScript · Lovable AI</div>
+    <a href="https://vanberry.lovable.app/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>E-Dictionary</h3>
+    <p>Dictionary web app using REST API responses.</p>
+    <div class="tech">JavaScript · REST API</div>
+    <a href="https://aura-robot-website.vercel.app/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>Pointer Controlled Jarvis</h3>
+    <p>Interactive humanoid robot built using Spline.</p>
+    <div class="tech">JavaScript · Spline</div>
+    <a href="https://nexus-spline-view.lovable.app/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>Love Link</h3>
+    <p>Interactive chatting platform built using Base44.</p>
+    <div class="tech">JavaScript · Base44</div>
+    <a href="https://lovelink143.base44.app/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>CyberID v2</h3>
+    <p>Second version of CyberID created using Lovable.</p>
+    <div class="tech">JavaScript · Lovable</div>
+    <a href="https://neo-identity-lab.lovable.app/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>Magnifying Bubble</h3>
+    <p>Interactive glass distortion bubble built with Spline.</p>
+    <div class="tech">Spline · Prompt</div>
+    <a href="https://my.spline.design/distortingtypography-CbfolX5I4kk3Rxyw57sFyV6Z/" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+    <h3>Dune Portfolio</h3>
+    <p>Interactive portfolio designed using Figma.</p>
+    <div class="tech">JavaScript · Figma</div>
+    <a href="https://words-deal-13325233.figma.site/" target="_blank">View Project →</a>
+</div>
+
+</section>
+
+<footer>
+    © 2026 • Designed with Apple-style simplicity
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
